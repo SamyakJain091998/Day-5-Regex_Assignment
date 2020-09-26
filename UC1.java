@@ -2,12 +2,12 @@ import java.util.regex.*;
 import java.util.*;
 class UC1 { 
 
-	public static boolean isValidPinCode(String pinCode) 
+	public static boolean isValidFirstName(String fname) 
 	{ 
 
 		String regex = "^[A-Z]{1}[a-zA-Z]{2,}";
 		Pattern p = Pattern.compile(regex); 
-		Matcher m = p.matcher(pinCode); 
+		Matcher m = p.matcher(fname); 
 		return m.matches(); 
 	} 
 
@@ -18,6 +18,6 @@ class UC1 {
 		String fname = sc.nextLine();
 		System.out.println( 
 			fname + " is valid: "
-			+ isValidPinCode(fname)); 
+			+ isValidFirstName(fname)); 
 	} 
 } 
